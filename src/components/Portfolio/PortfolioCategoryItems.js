@@ -1,18 +1,18 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import CategoryCard from "./CategoryCard"
+//import CategoryCard from "./CategoryCard"
 import styled from "styled-components"
-import Title from "../Title"
+//import Title from "../Title"
 
 const PortfolioCategoryItems = () => {
   const { portfolioCategories } = useStaticQuery(getPortfolioItemCategories)
   return (
     <>
-      <Title title="PROJECT" subtitle="CATEGORIES" />
+      {/* <Title title="PROJECT" subtitle="CATEGORIES" /> */}
       <PortfolioItemsWrapper data-cy="project-categories">
-        {portfolioCategories.edges.map(({ node }) => {
+        {/* {portfolioCategories.edges.map(({ node }) => {
           return <CategoryCard key={node.id} category={node} />
-        })}
+        })} */}
       </PortfolioItemsWrapper>
     </>
   )

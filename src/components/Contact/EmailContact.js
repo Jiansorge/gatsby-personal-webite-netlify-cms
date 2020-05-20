@@ -6,7 +6,7 @@ import { emailStrings } from "./ContactStrings"
 const EmailContact = () => {
   return (
     <section>
-      <Title title="Contact us" subtitle="now" />
+      <Title title="Contact " subtitle="   Form" />
       <div>
         <form
           action="https://formspree.io/..."

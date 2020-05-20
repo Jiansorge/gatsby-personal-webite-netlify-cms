@@ -4,8 +4,8 @@ import links from "../constants/links"
 import styles from "../css/footer.module.css"
 
 const Footer = () => {
-  const linkProfilo =
-    process.env.LINK_URL || "https://www.linkedin.com/in/jiansorge/"
+  // const linkProfilo =
+  //   process.env.LINK_URL || "https://www.linkedin.com/in/jiansorge/"
   return (
     <footer className={styles.footer}>
       <div className={styles.links}>

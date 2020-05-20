@@ -5,7 +5,7 @@ import Services from "../components/Home/Services"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
-import ProjectWithUs from "../components/Contact/ProjectWithUs"
+//import ProjectWithUs from "../components/Contact/ProjectWithUs"
 
 const Index = ({ data }) => {
   return (

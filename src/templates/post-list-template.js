@@ -22,7 +22,7 @@ const BlogListTemplate = props => {
     <Layout>
       <SEO title="Resume" />
       <section className={styles.blog}>
-        <Title title="last" subtitle="articles" />
+        <Title title="Resume" subtitle="" />
         {!(isFirst && isLast) && (
           <section className={styles.links}>
             {!isFirst && (
@@ -35,7 +35,7 @@ const BlogListTemplate = props => {
                 <AniLink
                   key={i}
                   fade
-                  to={`/blog/${i === 0 ? "" : i + 1}`}
+                  to={`/resume/${i === 0 ? "" : i + 1}`}
                   className={
                     i + 1 === currentPage
                       ? `${styles.link} ${styles.active}`

@@ -10,7 +10,7 @@ import SEO from "../components/SEO"
 export default ({ data }) => {
   return (
     <Layout>
-      <SEO title="Portfolio" />
+      <SEO title="Portfolio" description={"Jian's Portfolio"} />
       <StyledHero img={data.contactImage.childImageSharp.fluid}>
         <Banner title="Portfolio" />
       </StyledHero>
