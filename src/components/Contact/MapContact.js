@@ -21,7 +21,6 @@ const MapContact = () => {
       </MapWrapper>
     </section>
   )
-
 }
 
 const MapWrapper = styled.div`

@@ -17,8 +17,8 @@ export default ({ data }) => {
         <Banner title="Contact Me!" />
       </StyledHero>
       <ContactWrapper>
-      <EmailContact />
-      <MapContact />
+        <EmailContact />
+        <MapContact />
       </ContactWrapper>
       {/* <ProjectWithUs /> */}
     </Layout>
