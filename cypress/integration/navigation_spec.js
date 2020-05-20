@@ -10,10 +10,10 @@ describe("should navigate", function() {
 
     cy.url().should("contain", "portfolio")
   })
-  it("Should visit blog", function() {
-    cy.get("[data-cy=blog]").click()
+  it("Should visit resume", function() {
+    cy.get("[data-cy=resume]").click()
 
-    cy.url().should("contain", "blog")
+    cy.url().should("contain", "resume")
   })
   it("Should visit contacts", function() {
     cy.get("[data-cy=contacts]").click()

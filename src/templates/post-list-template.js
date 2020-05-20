@@ -15,12 +15,12 @@ const BlogListTemplate = props => {
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   const previousPage =
-    currentPage - 1 === 1 ? `/blog` : `/blog/${currentPage - 1}`
-  const nextPage = `/blog/${currentPage + 1}`
+    currentPage - 1 === 1 ? `/resume` : `/resume/${currentPage - 1}`
+  const nextPage = `/resume/${currentPage + 1}`
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="Resume" />
       <section className={styles.blog}>
         <Title title="last" subtitle="articles" />
         {!(isFirst && isLast) && (

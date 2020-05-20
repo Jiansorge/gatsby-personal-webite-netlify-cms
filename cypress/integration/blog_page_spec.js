@@ -33,7 +33,7 @@ describe("Test dynamic blog", function() {
       posts = res.body.data.posts.edges
     })
 
-    cy.visit("/blog")
+    cy.visit("/resume")
   })
 
   it("Load right number of posts", () => {
@@ -52,16 +52,16 @@ describe("Test dynamic blog", function() {
   })
 })
 
-describe("Test blog page", function() {
+describe("Test resume page", function() {
   before(() => {
-    cy.visit("/blog")
+    cy.visit("/resume")
   })
 
-  it("Successfully loads the blog page", function() {
-    cy.url().should("contain", "/blog")
+  it("Successfully loads the resume page", function() {
+    cy.url().should("contain", "/resume")
   })
 
   it("Title is correct", function() {
-    cy.title().should("contain", "Blog")
+    cy.title().should("contain", "Resume")
   })
 })
