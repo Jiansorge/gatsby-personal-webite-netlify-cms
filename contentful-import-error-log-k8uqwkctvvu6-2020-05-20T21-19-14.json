@@ -11,8 +11,7 @@
         "status": 403,
         "statusText": "Forbidden",
         "message": "The access token you sent could not be found or is invalid.",
-        "details": {
-        },
+        "details": {},
         "request": {
           "url": "k8uqwkctvvu6",
           "headers": {

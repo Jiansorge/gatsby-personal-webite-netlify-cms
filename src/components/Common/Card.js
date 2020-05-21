@@ -28,11 +28,11 @@ const Card = ({ node }) => {
         >
           open
         </AniLink>
-        {date && (
+        {/* {date && (
           <h6 className={styles.date}>
             {moment(date).format(`MMMM DD, YYYY`)}
           </h6>
-        )}
+        )} */}
       </div>
       <div className={styles.footer}>
         <h4>{title}</h4>

@@ -15,14 +15,14 @@ const PortoflioCategory = ({ data }) => {
       <SEO title={title} description={description} />
       <CategoryWrapper className={styles.blog}>
         <h1>{title}</h1>
-        <AniLink
+        {/* <AniLink
           fade
           to={`/portfolio`}
           className="btn-primary"
           style={{ marginTop: "3rem" }}
         >
           back
-        </AniLink>
+        </AniLink> */}
         <PortfolioList items={portfolioitem} />
       </CategoryWrapper>
     </Layout>
