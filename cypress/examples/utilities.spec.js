@@ -92,12 +92,12 @@ context("Utilities", () => {
       .should("have.class", "badge")
 
     // the time in the element should be between 3pm and 5pm
-    const start = Cypress.moment("3:00 PM", "LT")
-    const end = Cypress.moment("5:00 PM", "LT")
+    const start = Cypress.moment("3:00 PM", "EN")
+    const end = Cypress.moment("5:00 PM", "EN")
 
     cy.get(".utility-moment .badge").should($el => {
       // parse American time like "3:38 PM"
-      const m = Cypress.moment($el.text().trim(), "LT")
+      const m = Cypress.moment($el.text().trim(), "EN")
 
       // display hours + minutes + AM|PM
       const f = "h:mm A"

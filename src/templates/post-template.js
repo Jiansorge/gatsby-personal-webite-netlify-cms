@@ -33,9 +33,9 @@ const BlogTemplate = ({ data }) => {
           </AniLink> */}
           <div className="content-container">
             <h1 className="content-title">{title}</h1>
-            <h4 className="content-published">
+            {/* <h4 className="content-published">
               Published: {moment(published).format(`MMMM DD, YYYY`)}
-            </h4>
+            </h4> */}
             <hr />
             <article className={styles.post}>
               <RichTextDisplay json={json} />
