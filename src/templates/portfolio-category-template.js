@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
 import styles from "../css/blog.module.css"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+//import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
 import PortfolioList from "../components/Portfolio/PortfolioList"
 

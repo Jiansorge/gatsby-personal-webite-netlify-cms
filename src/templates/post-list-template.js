@@ -4,13 +4,14 @@ import Layout from "../components/Layout"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "../css/blog.module.css"
 import Title from "../components/Title"
-import Card from "../components/Common/Card"
+//import Card from "../components/Common/Card"
 import SEO from "../components/SEO"
 
 const BlogListTemplate = props => {
   const { currentPage, numPages } = props.pageContext
   const { data } = props
-  // const {blogImage} = useStaticQuery(getBlogImage)
+  console.log(data)
+  //const {blogImage} = useStaticQuery(getBlogImage)
 
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
@@ -53,9 +54,19 @@ const BlogListTemplate = props => {
             )}
           </section>
         )}
-        <div className={styles.center} data-cy="post-list">
+        {/* <div className={styles.center} data-cy="post-list">
           {data.posts.edges.map(({ node }) => {
             return <Card key={node.id} node={node} />
+          })}
+        </div> */}
+
+
+        <div className={styles.article} data-cy="post-list">
+
+          {/* {console.log(data.category.richText.content.map)} */}
+
+          {data.category.richText.content.map((value ) => {
+            return <p>{value.content[0].value}</p>
           })}
         </div>
       </section>
@@ -84,6 +95,15 @@ export const query = graphql`
             fluid {
               ...GatsbyContentfulFluid
             }
+          }
+        }
+      }
+    }
+    category: contentfulBlogArticleCategory {
+      richText {
+        content {
+          content {
+            value
           }
         }
       }
