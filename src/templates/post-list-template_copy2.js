@@ -11,14 +11,10 @@
 // import styled from "styled-components"
 // import RichTextDisplay from "../components/Blog/RichTextDisplay"
 
-
 // // const BlogListTemplate = props => {
 // //   const { currentPage, numPages } = props.pageContext
 // //   const { data } = props
 // //   // const {blogImage} = useStaticQuery(getBlogImage)
-
-
-
 
 // //   const isFirst = currentPage === 1
 // //   const isLast = currentPage === numPages
@@ -75,7 +71,6 @@
 // //   )
 // // }
 
-
 // // export const query = graphql`
 // //   query getPosts($skip: Int!, $limit: Int!) {
 // //     posts: allContentfulBlogArticle(
@@ -103,7 +98,6 @@
 // //     }
 // //   }
 // // `
-
 
 // const BlogTemplate =  data  => {
 //   console.log(data)
@@ -204,4 +198,3 @@
 
 // //export default BlogListTemplate
 // export default BlogTemplate
-

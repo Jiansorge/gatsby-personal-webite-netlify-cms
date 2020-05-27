@@ -17,6 +17,6 @@ export default [
   },
   {
     path: "/contact",
-    text: "contacts",
+    text: "contact",
   },
 ]

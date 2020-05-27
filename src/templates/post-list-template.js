@@ -60,12 +60,10 @@ const BlogListTemplate = props => {
           })}
         </div> */}
 
-
         <div className={styles.article} data-cy="post-list">
-
           {/* {console.log(data.category.richText.content.map)} */}
 
-          {data.category.richText.content.map((value ) => {
+          {data.category.richText.content.map(value => {
             return <p>{value.content[0].value}</p>
           })}
         </div>
