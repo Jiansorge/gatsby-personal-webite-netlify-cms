@@ -22,7 +22,7 @@ export default ({ data }) => {
 
 export const getPortfolioImage = graphql`
   query {
-    contactImage: file(relativePath: { eq: "portfolio-header.jpg" }) {
+    contactImage: file(relativePath: { eq: "portfolio-header2.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

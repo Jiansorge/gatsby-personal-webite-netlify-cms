@@ -1,11 +1,12 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+// import { graphql } from "gatsby"
+//import { graphql, useStaticQuery } from "gatsby"
 //import CategoryCard from "./CategoryCard"
 import styled from "styled-components"
 //import Title from "../Title"
 
 const PortfolioCategoryItems = () => {
-  const { portfolioCategories } = useStaticQuery(getPortfolioItemCategories)
+  //const { portfolioCategories } = useStaticQuery(getPortfolioItemCategories)
   return (
     <>
       {/* <Title title="PROJECT" subtitle="CATEGORIES" /> */}
@@ -18,26 +19,26 @@ const PortfolioCategoryItems = () => {
   )
 }
 
-const getPortfolioItemCategories = graphql`
-  {
-    portfolioCategories: allContentfulPortfolioItemCategory(
-      filter: { node_locale: { eq: "en-US" } }
-    ) {
-      edges {
-        node {
-          id: contentful_id
-          title
-          slug
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// const getPortfolioItemCategories = graphql`
+//   {
+//     portfolioCategories: allContentfulPortfolioItemCategory(
+//       filter: { node_locale: { eq: "en-US" } }
+//     ) {
+//       edges {
+//         node {
+//           id: contentful_id
+//           title
+//           slug
+//           image {
+//             fluid {
+//               ...GatsbyContentfulFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 const PortfolioItemsWrapper = styled.section`
   display: grid;

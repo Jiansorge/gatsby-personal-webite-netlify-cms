@@ -17,7 +17,7 @@ const BlogTemplate = ({ data }) => {
 
   const {
     title,
-    date: published,
+    //date: published,
     content: { json },
     //richText: { json },
     image,

@@ -4,7 +4,9 @@
   color: var(--mainBlack);
 }
 .banner h1 {
-  background: rgba(255,255,255,0.9);
+  background: black, 0.2;
+  
+  /* background: rgba(255,255,255,0.9); */
   font-family: "Rubik", Sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
@@ -13,7 +15,7 @@
   margin-bottom: 2rem;
 }
 .banner p {
-  background: rgba(255,255,255,0.9);
+  background: rgba(0,0,0,0.2);
   width: 85%;
   margin: 0 auto;
   margin-bottom: 2rem;

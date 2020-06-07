@@ -16,8 +16,12 @@ const PortfolioItemTemplate = ({ data }) => {
   } = data.portfolioItem
   const { desc } = description || {}
   const [mainImage, ...itemImages] = images
+  var MarkdownIt = require('markdown-it'),
+  md = new MarkdownIt();
+  var descHTML = md.render(desc);
 
   return (
+
     <Layout>
       <SEO title={title} description={description} />
       <HeaderStructureWrapper>
@@ -42,7 +46,13 @@ const PortfolioItemTemplate = ({ data }) => {
             })}
           </div>
           <h2>{title}</h2>
-          {desc && <p className={styles.desc}>{desc}</p>}
+          {/* {desc && <p className={styles.desc}>{desc}</p>} */}
+
+        <div
+          className={styles.desc}
+          dangerouslySetInnerHTML={{ __html: descHTML }}
+        />
+
           <AniLink
             fade
             to={`/${slug}`}

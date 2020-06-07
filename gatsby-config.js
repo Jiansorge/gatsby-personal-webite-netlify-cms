@@ -16,7 +16,7 @@ module.exports = {
     description: "Jian Sorge's Portfolio using Gatsby+Contentful",
     author: "Jian Sorge",
     twitterUsername: "",
-    image: "/index-hero.jpg",
+    image: "/index-hero.gif",
     siteUrl: "https://jiansorge.com",
   },
   plugins: [
@@ -41,6 +41,7 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         // eslint-disable-next-line
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        forceFullSync: true
       },
     },
   ],
