@@ -7,7 +7,7 @@ import moment from "moment"
 import "moment/locale/it"
 
 const Card = ({ node }) => {
-  const { slug, title, image, date, category } = node
+  const { slug, title, image, category } = node
 
   var momentLocale = moment()
   momentLocale.locale("it")

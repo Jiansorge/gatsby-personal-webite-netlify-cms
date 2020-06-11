@@ -41,7 +41,7 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         // eslint-disable-next-line
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        forceFullSync: true
+        forceFullSync: true,
       },
     },
   ],

@@ -6,11 +6,13 @@ import styles from "../css/blog.module.css"
 import Title from "../components/Title"
 //import Card from "../components/Common/Card"
 import SEO from "../components/SEO"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { BLOCKS } from "@contentful/rich-text-types"
 
 const BlogListTemplate = props => {
   const { currentPage, numPages } = props.pageContext
   const { data } = props
-  console.log(data)
+  const contentfulBlogArticle = data.contentfulBlogArticle.content.json
   //const {blogImage} = useStaticQuery(getBlogImage)
 
   const isFirst = currentPage === 1
@@ -18,6 +20,41 @@ const BlogListTemplate = props => {
   const previousPage =
     currentPage - 1 === 1 ? `/resume` : `/resume/${currentPage - 1}`
   const nextPage = `/resume/${currentPage + 1}`
+  console.log("contentfulBlogArticle", contentfulBlogArticle)
+
+  console.log("Render 1", data.category.richText)
+  console.log(
+    "Render 2",
+    documentToReactComponents(data.category.richText.content["en-US"])
+  )
+
+  const Text = ({ children }) => <p className="styles.center">{children}</p>
+
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (contentfulBlogArticle, children) => (
+        <Text>{children}</Text>
+      ),
+    },
+  }
+  console.log(
+    "Render 3",
+    documentToReactComponents(data.category.richText.json, options)
+  )
+  // contentfulBlogArticle {
+  //   content {
+  //     json
+  //   }
+  // }
+  console.log(
+    "Render 3",
+    documentToReactComponents(data.contentfulBlogArticle.content.json, options)
+  )
+
+  var MarkdownIt = require("markdown-it"),
+    md = new MarkdownIt()
+  // var HTML = md.render(contentfulBlogArticle);
+  // console.log(HTML)
 
   return (
     <Layout>
@@ -59,13 +96,19 @@ const BlogListTemplate = props => {
             return <Card key={node.id} node={node} />
           })}
         </div> */}
-
-        <div className={styles.article} data-cy="post-list">
+        {documentToReactComponents(data.category.richText["en-US"])}
+        {documentToReactComponents(data.category.richText.json, options)}
+        <div className={styles.template} data-cy="post-list">
           {/* {console.log(data.category.richText.content.map)} */}
 
-          {data.category.richText.content.map(value => {
-            return <p>{value.content[0].value}</p>
-          })}
+          {/* {data.category.richText.content.map(value => {
+            return <p >{value.content[0].value}</p>
+          })} */}
+
+          {documentToReactComponents(
+            data.contentfulBlogArticle.content.json,
+            options
+          )}
         </div>
       </section>
     </Layout>
@@ -74,6 +117,11 @@ const BlogListTemplate = props => {
 
 export const query = graphql`
   query getPosts($skip: Int!, $limit: Int!) {
+    contentfulBlogArticle {
+      content {
+        json
+      }
+    }
     posts: allContentfulBlogArticle(
       skip: $skip
       limit: $limit

@@ -11,9 +11,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Portfolio" description={"Jian's Portfolio"} />
-      <StyledHero img={data.contactImage.childImageSharp.fluid}>
+      {/* <StyledHero img={data.contactImage.childImageSharp.fluid}>
         <Banner title="Portfolio" />
-      </StyledHero>
+      </StyledHero> */}
       <PortfolioCategoryItems />
       <PortfolioItems />
     </Layout>

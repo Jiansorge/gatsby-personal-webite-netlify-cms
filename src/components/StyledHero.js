@@ -18,7 +18,7 @@ const StyledHero = ({ img, className, children, home }) => {
 
 const getDefaultImage = graphql`
   {
-    file(relativePath: { eq: "index-hero.gif" }) {
+    file(relativePath: { eq: "index-hero.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

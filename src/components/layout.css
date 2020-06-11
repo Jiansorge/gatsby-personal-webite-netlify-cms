@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
 
 :root {
-  --primaryColor: #f7f7f7;
-  --mainWhite:black;
+  --primaryColor: #ff9683;
+  --mainWhite:#212035;
   --offWhite: #f7f7f7;
-  --mainBlack: #afafaf;
+  --mainBlack: #98A1E9;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
   --mainTransition: all 0.3s linear;
@@ -12,6 +12,13 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
+
+/* #383B68 // navy
+#76428A // purple
+#FBF236 // yellow
+#98A1E9 // indigo;
+#FF9683 // pink;
+#5FCDE4 // blue; */
 
 * {
   margin: 0;
