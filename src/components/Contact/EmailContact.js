@@ -3,21 +3,17 @@ import Title from "../Title"
 import styles from "../../css/contact.module.css"
 import { emailStrings } from "./ContactStrings"
 
-
-
 class EmailContact extends React.Component {
   constructor(props) {
-    super(props);
-    this.submitForm = this.submitForm.bind(this);
+    super(props)
+    this.submitForm = this.submitForm.bind(this)
     this.state = {
-      status: ""
+      status: "",
     }
   }
 
-
-  
   render() {
-    const { status } = this.state;
+    const { status } = this.state
     return (
       <section>
         <Title title="Contact " subtitle="   Form" />
@@ -29,8 +25,14 @@ class EmailContact extends React.Component {
             className={styles.form}
           >
             <div>
-              <input name="f_name" name="text_field" type="hidden" value=""/>
-              <input name="g_name" name="phone_fied" type="text" value="" style={{"position": "absolute", "top": "3px", "left": "-680px"}}/>
+              <input name="f_name" name="text_field" type="hidden" value="" />
+              <input
+                name="g_name"
+                name="phone_fied"
+                type="text"
+                value=""
+                style={{ position: "absolute", top: "3px", left: "-680px" }}
+              />
               <label htmlFor="name">name</label>
               <input
                 type="text"
@@ -61,40 +63,41 @@ class EmailContact extends React.Component {
               />
             </div>
             <div>
-              {status === "SUCCESS" 
-                ? <p>Thanks!</p> 
-                :<input
-                type="submit"
-                value={emailStrings.submitText}
-                className={styles.submit}
-                onPress={()=>submitForm}
-              />}
+              {status === "SUCCESS" ? (
+                <p>Thanks!</p>
+              ) : (
+                <input
+                  type="submit"
+                  value={emailStrings.submitText}
+                  className={styles.submit}
+                  onPress={() => submitForm}
+                />
+              )}
             </div>
-            {status === "ERROR" 
-              && <p>Ooops! There was an error.</p>}
+            {status === "ERROR" && <p>Ooops! There was an error.</p>}
           </form>
         </div>
       </section>
-  )
-}
+    )
+  }
 
   submitForm(ev) {
-    ev.preventDefault();
-    const form = ev.target;
-    const data = new FormData(form);
-    const xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader("Accept", "application/json");
+    ev.preventDefault()
+    const form = ev.target
+    const data = new FormData(form)
+    const xhr = new XMLHttpRequest()
+    xhr.open(form.method, form.action)
+    xhr.setRequestHeader("Accept", "application/json")
     xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.readyState !== XMLHttpRequest.DONE) return
       if (xhr.status === 200) {
-        form.reset();
-        this.setState({ status: "SUCCESS" });
+        form.reset()
+        this.setState({ status: "SUCCESS" })
       } else {
-        this.setState({ status: "ERROR" });
+        this.setState({ status: "ERROR" })
       }
-    };
-    xhr.send(data);
+    }
+    xhr.send(data)
   }
 }
 
