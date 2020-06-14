@@ -5,13 +5,15 @@ import styled from "styled-components"
 const MapContact = () => {
   return (
     <section>
-      <Title title="My   " subtitle="Location" />
-      <MapWrapper>
+      <Title title="My   " subtitle="Location"  />
+      <br />
+
+      <MapWrapper style={{'margin-top':'7px'}}>
         <iframe
           title="change-maps"
           frameBorder="0"
           width="100%"
-          height="350px"
+          height="353px"
           scrolling="no"
           marginHeight="0"
           marginWidth="0"
