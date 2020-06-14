@@ -17,7 +17,10 @@ const Index = ({ data }) => {
           info="Web Developer"
         ></Banner>
       </StyledHero>
+      <h4 style={{'text-align':'right'}}>Image Credit: <a href="https://dribbble.com/shots/3339732-Horizon" style={{'color':'#5fcde5'}}>Horizon</a> by <a href="https://dribbble.com/mrbrownjeremy" style={{'color':'#5fcde5'}}>Jeremy Brown</a></h4>
+
       <Services />
+
       {/*<ProjectWithUs />*/}
     </Layout>
   )

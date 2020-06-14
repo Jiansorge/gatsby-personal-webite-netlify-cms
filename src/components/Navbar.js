@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
-        <div className={styles.navHeader}>
+        <div className={styles.navHeader} style={{ "margin-left": "0px" }}>
           <Anilink fade to="/" data-cy="logo">
             <img src={Logo} alt="logo" />
           </Anilink>
