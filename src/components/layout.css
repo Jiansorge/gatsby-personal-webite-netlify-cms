@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
+@font-face {
+  font-family: 'Determination';
+  src: local('Determination'), url(../fonts/determination/DTM-Sans.otf) format('truetype');}
 
 :root {
   --primaryColor: #ff9683;
@@ -27,7 +30,7 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Determination", sans-serif;
   color: var(--mainBlack);
   background: var(--mainWhite);
   line-height: 1.4;
@@ -89,4 +92,13 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.backgroundImage {
+  /* display: block; */
+  /* align-items: left; */
+  /* align-items: flex-start; */
+  /* align-content: flex-start; */
+
+  /* border: 40px solid orange; */
 }

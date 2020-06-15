@@ -26,7 +26,7 @@ const Navbar = () => {
             onClick={toggleNav}
             data-cy="mobile-button"
           >
-            <FaAlignRight className={styles.logoIcon} />
+            <FaAlignRight className={styles.logoIcon} aria-label="links"/>
           </button>
         </div>
         <ul
