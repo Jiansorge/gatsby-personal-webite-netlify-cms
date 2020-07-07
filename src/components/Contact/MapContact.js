@@ -5,20 +5,19 @@ import styled from "styled-components"
 const MapContact = () => {
   return (
     <section>
-      <Title title="My   " subtitle="Location"  />
+      <Title title="My   " subtitle="Location" />
       <br />
 
-      <MapWrapper style={{'margin-top':'7px'}}>
-        <iframe
-          title="change-maps"
+      <MapWrapper style={{ "margin-top": "7px" }}>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172138.65426536786!2d-122.48215056594603!3d47.613174641881706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA%2C%20USA!5e0!3m2!1sen!2sdk!4v1594159372290!5m2!1sen!2sdk" 
+          title="my-location"
           frameBorder="0"
           width="100%"
           height="353px"
           scrolling="no"
           marginHeight="0"
           marginWidth="0"
-          src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d4498.957199824347!2d12.558091!3d55.6806665!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x4652530842a47dc5%3A0xdac6d190593fa013!2sIndre%20By%2C%201369%20Copenhagen%20Municipality!3m2!1d55.6818902!2d12.5582548!5e0!3m2!1sen!2sdk!4v1589950896463!5m2!1sen!2sdk&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
-          aria-label="Via oriani 22 Cervia"
+          aria-label="Seattle, WA, USA"
         ></iframe>
       </MapWrapper>
     </section>
