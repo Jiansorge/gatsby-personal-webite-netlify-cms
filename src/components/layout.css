@@ -95,7 +95,9 @@ main {
 }
 
 .backgroundImage {
-  /* display: block; */
+  display: block;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: pixelated;
   /* align-items: left; */
   /* align-items: flex-start; */
   /* align-content: flex-start; */
