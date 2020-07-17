@@ -11,10 +11,10 @@ export default [
   //   path: "/blog",
   //   text: "blog",
   // },
-  {
-    path: "/resume",
-    text: "resume",
-  },
+  // TODO{ 
+  //   path: "/resume",
+  //   text: "resume",
+  // },
   {
     path: "/contact",
     text: "contact",
