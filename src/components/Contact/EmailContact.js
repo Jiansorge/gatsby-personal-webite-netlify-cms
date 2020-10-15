@@ -94,7 +94,7 @@ class EmailContact extends React.Component {
                 {status === "SUCCESS" ? (
                   <p>Thanks!</p>
                 ) : (
-                  this.state.inputValue.length < 1 && (
+                  this.state.inputValue.length < -99 &&
                     <button
                       value={emailStrings.submitText}
                       className={styles.submit}
@@ -103,7 +103,6 @@ class EmailContact extends React.Component {
                     >
                       Submit
                     </button>
-                  )
                 )}
               </div>
 
