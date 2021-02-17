@@ -1,24 +1,24 @@
 import React from "react"
-import { FaCertificate, FaReact, FaNode, FaCubes } from "react-icons/fa"
+import { FaCertificate, FaReact, FaNode, FaCubes, FaUsers } from "react-icons/fa"
 
 export default [
   {
-    icon: <FaCertificate />,
-    title: "Certified",
+    icon: <FaUsers />,
+    title: "Industry Experience",
     text:
-      "University of Washington Continuum College educated in JavaScript, HTML5 & CSS3",
+      "Developed React Typescript components using agile methods on a Docker micro-service web application for Fortune 100 company",
+  },
+  {
+    icon: <FaCertificate />,
+    title: "Full-Stack Certified",
+    text:
+      "University of Washington Continuum College educated in Full-Stack JavaScript, HTML5 & CSS3",
   },
   {
     icon: <FaReact />,
     title: "React",
     text:
-      "Front-end experience with React using APIs, Firebase and testing with Enzyme",
-  },
-  {
-    icon: <FaNode />,
-    title: "Node.js",
-    text:
-      "Back-end experience with Node using Express, JSON Web Tokens,  Mongoose and  Bcrypt",
+      "Front-end experience with React using APIs, Firebase and testing with Enzyme + Gherkin BDD",
   },
   {
     icon: <FaCubes />,
